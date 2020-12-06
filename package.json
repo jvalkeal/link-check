@@ -1,8 +1,8 @@
 {
-  "name": "setup-cf-cli-action",
+  "name": "link-check",
   "version": "0.0.1",
   "private": true,
-  "description": "setup cloudfoundry cli action",
+  "description": "Check validity of links",
   "main": "dist/index.js",
   "scripts": {
     "build": "ncc build src/link-check.ts",
@@ -27,9 +27,12 @@
     "@actions/http-client": "^1.0.6",
     "@actions/io": "^1.0.0",
     "@actions/tool-cache": "^1.6.0",
-    "linkinator": "^2.4.0"
+    "cheerio": "^1.0.0-rc.3",
+    "gaxios": "^4.1.0",
+    "p-queue": "^6.6.2"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.23",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.4",
     "@types/semver": "^6.0.0",

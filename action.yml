@@ -4,7 +4,16 @@ author: 'jvalkeal'
 inputs:
   url:
     description: 'Url to check'
-    required: true
+    required: false
+  config:
+    description: 'Embedded json config'
+    required: false
+  fail:
+    description: 'Fail if broken links found, defaults to true'
+    required: false
+outputs:
+  results:
+    description: 'Link check results as json'
 runs:
   using: 'node12'
   main: 'dist/index.js'
