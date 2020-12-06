@@ -1,0 +1,10 @@
+name: 'Check Links'
+description: 'Check Links'
+author: 'jvalkeal'
+inputs:
+  url:
+    description: 'Url to check'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
