@@ -8207,7 +8207,7 @@ function run() {
             core.endGroup();
             core.setOutput('results', results);
             // we fails step if instructed and links check reported failure
-            if (fail && !results.status) {
+            if (fail && results.status) {
                 core.setFailed('Found broken links');
             }
         }
@@ -24240,7 +24240,7 @@ function handle(url, config) {
             };
         });
         const ret = {
-            status: true,
+            status: !result.passed,
             brokenLinks
         };
         core.debug(`HandlerResult: ${util_1.inspect(ret)}`);
