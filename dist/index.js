@@ -8187,7 +8187,7 @@ const core = __importStar(__webpack_require__(470));
 const links_handler_1 = __webpack_require__(733);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        const fail = Boolean(inputNotRequired('config'));
+        const fail = inputNotRequired('fail') === 'false' ? false : true;
         // default output when links handling fails
         let results = {
             status: false,
