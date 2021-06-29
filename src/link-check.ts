@@ -2,7 +2,7 @@ import * as core from '@actions/core';
 import {handle, HandlerResult} from './links-handler';
 
 async function run() {
-  const fail = Boolean(inputNotRequired('config'));
+  const fail = inputNotRequired('fail') === 'false' ? false : true;
 
   // default output when links handling fails
   let results: HandlerResult = {
