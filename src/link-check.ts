@@ -23,7 +23,7 @@ async function run() {
     core.setOutput('results', results);
 
     // we fails step if instructed and links check reported failure
-    if (fail && !results.status) {
+    if (fail && results.status) {
       core.setFailed('Found broken links');
     }
   }

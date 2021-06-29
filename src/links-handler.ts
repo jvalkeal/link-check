@@ -63,7 +63,7 @@ export async function handle(
     });
 
   const ret: HandlerResult = {
-    status: true,
+    status: !result.passed,
     brokenLinks
   };
   core.debug(`HandlerResult: ${inspect(ret)}`);
